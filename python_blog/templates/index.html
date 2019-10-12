@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<p style="text-align: center; font: 24;color: blue;font-size: larger;">这是index主页面,是通过jinja模板渲染出来的!</p>
+<hr>
+<p style="text-align: center; font: 24;color: blue;font-size: larger;">这一部分显示用户信息,是通过jinja模板渲染和传递出来的!</p>
+<p style="text-align: right; font: 24;color: black;font-size: larger;">用户名:{{username}}</p>
+<p style="text-align: right; font: 24;color: black;font-size: larger;">年龄:{{age}}</p>
+<p style="text-align: right; font: 24;color: black;font-size: larger;">性别:{{gender}}</p>
+<p style="text-align: right; font: 24;color: black;font-size: larger;">身高:{{height}}</p>
+<p style="text-align: right; font: 24;color: black;font-size: larger;">姓名:{{person.name}}</p>
+<p style="text-align: right; font: 24;color: black;font-size: larger;">年龄:{{person.age}}</p>
+<hr>
+<p style="text-align: center; font: 24;color: black;font-size: larger;"><a href="{{website.简书}}">简书网址:{{website.简书}}</p>
+<hr>
+<p style="text-align: center; font: 24;color: black;font-size: larger;"><a href="{{website.CSDN}}">CSDN网址:{{website.CSDN}}</p>
+<hr>
+</body>
+</html>
