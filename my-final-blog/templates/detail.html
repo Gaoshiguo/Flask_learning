@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}详情{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename="css/detail.css") }}">
+{% endblock %}
+{% block main %}
+<h3 class="title">{{ article.title }}</h3>
+    <p class="article-infor">
+    <span class="author-left">作者：{{ article.author.username }}</span>
+    <span>发布时间：{{ article.create_time }}</span>
+    </p>
+    <hr>
+    <p class="contnet">
+    {{ article.content }}
+    </p>
+    <hr>
+    <form action="{{ url_for('review') }}" method="POST">
+    <div class="cm">
+        <div class="form-group">
+        <input type="text" name="review-content" class="form-control" placeholder="请输入评论">
+            <input type="hidden" name="article_id" value="{{ article.id }}">
+        </div>
+
+    <div class="form-group" style="text-align: right">
+        <button class="btn btn-primary ">提交评论</button>
+    </div>
+        <hr>
+    </div>
+
+    </form>
+    <h3 class="com">评论:(0)</h3>
+    <ul class="re-list">
+    {% for re in article.reviews %}
+        <li>
+        <div class="re-infor">
+            <img src="{{ url_for('static',filename='images/logo.jpg') }}" alt="" class="re-infor-image">
+            <span class="username">{{ re.author.username }}：</span>
+            <span class="createtime">{{ re.create_time }}</span>
+        </div>
+        <p class="re-content">{{ re.content }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+
+    </div>
+{% endblock %}

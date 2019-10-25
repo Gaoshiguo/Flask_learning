@@ -1,0 +1,47 @@
+.title{
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+}
+.article-infor{
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.contnet{
+    padding: 40px;
+}
+.author-left{
+    margin-right: 15px;
+}
+.com{
+    text-align: left;
+
+}
+
+.re-list li{
+    list-style: none;
+    border-bottom: 1px solid #eee;
+    padding-top: 10px;
+}
+.re-infor{
+    font-size: 16px;
+    color:#9b9b9b;
+    line-height: 40px;
+}
+.re-infor-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.username{
+    padding-left: 15px;
+}
+.createtime{
+    float: right;
+}
+.re-content{
+    padding-left: 60px;
+}
+

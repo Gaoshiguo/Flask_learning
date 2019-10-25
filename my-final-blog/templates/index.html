@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}首页{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static',filename="css/index.css") }}">
+{% endblock %}
+{% block main %}
+    <ul>
+    {% for article in articles %}
+    <li>
+        <div class="left">
+            <img src="{{ url_for('static',filename='images/logo.jpg') }}" alt="" class="image">
+        </div>
+        <div class="right">
+             <div class="article-content">
+            <p class="title"><a href="{{ url_for('detail',article_id=article.id) }}">标题：{{ article.title }}</a></p>
+            <p class="content">{{ article.content }}</p>
+        </div>
+        <div class="inf">
+            <span class="author">作者：{{ article.author.username }}</span>
+            <span class="time">创建时间：{{ article.create_time }}</span>
+        </div>
+        </div>
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+

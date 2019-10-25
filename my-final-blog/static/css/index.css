@@ -1,0 +1,38 @@
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+ul li{
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    padding: 15px 0;
+}
+.left{
+    width: 40px;
+    height: 100%;
+    float: left;
+}
+.left .image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+
+}
+.right{
+    float:left;
+    width: 660px;
+    margin-left: 15px;
+}
+
+.title a{
+    color: #259;
+    font-size: 15px;
+    font-weight: 900;
+}
+.inf{
+    text-align: right;
+}
+.inf .author{
+    margin-right: 20px;
+}
